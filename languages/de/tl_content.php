@@ -15,7 +15,8 @@ $GLOBALS['TL_LANG']['tl_content']['sw_device'] = array('Gerätetyp wählen','Auf
 $GLOBALS['TL_LANG']['tl_content']['sw_devices'] = array(
 	'all' => 'Alle Gerätetypen',
 	'desktop' => 'Nur auf Desktop-Geräten',
-	'mobile' => 'Nur auf Mobile-Geräten'
+	'mobile' => 'Nur auf Mobile-Geräten',
+	'mobile&ipad' => 'Mobile-Geräte & iPad'
 );
 
 $GLOBALS['TL_LANG']['tl_content']['device_legend'] = 'Geräte Einstellungen';

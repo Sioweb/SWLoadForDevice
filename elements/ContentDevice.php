@@ -20,7 +20,7 @@ class ContentDevice extends \Frontend
 	public function loadForDevice($objElement, $strBuffer)
 	{
 		$isMobile = \Environment::get('agent')->mobile;
-		if($objElement->sw_device == 'all' || !$objElement->sw_device || ($objElement->sw_device == 'desktop' && !$isMobile) || ($objElement->sw_device == 'mobile' && $isMobile))
+		if($objElement->sw_device == 'all' || !$objElement->sw_device || ($objElement->sw_device == 'mobile&ipad' && (stristr(\Environment::get('agent')->string,'ipad' ) || $isMobile)) || ($objElement->sw_device == 'desktop' && !$isMobile) || ($objElement->sw_device == 'mobile' && $isMobile))
 			return $strBuffer;
 	}
 }

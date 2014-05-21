@@ -30,6 +30,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['sw_device'] = array(
 	'exclude'                 => true,
 	'inputType'               => 'select',
 	'reference'				  => &$GLOBALS['TL_LANG']['tl_content']['sw_devices'],
-	'options'				  => array('all','desktop','mobile'),
+	'options'				  => array('all','desktop','mobile','mobile&ipad'),
 	'sql'                     => "varchar(50) NOT NULL default 'all'"
 );
