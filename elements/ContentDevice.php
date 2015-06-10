@@ -26,10 +26,10 @@ class ContentDevice extends \Frontend
       $objElement->sw_device == 'all' || 
       !$objElement->sw_device || 
 
-      ($objElement->sw_device == 'mobile&ipad' && (preg_match('/ipad|iPad/i',\Environment::get('agent')->string) === 0 || $isMobile)) || 
+      ($objElement->sw_device == 'mobile&ipad' && $isMobile) || 
       ($objElement->sw_device == 'desktop' && !$isMobile) || 
-      ($objElement->sw_device == 'desktop&ipad' && $MobileDetect->isTablet()) || 
-      ($objElement->sw_device == 'mobile' && $isMobile))
+      ($objElement->sw_device == 'desktop&ipad' && (!$MobileDetect->isMobile() || $MobileDetect->isTablet())) || 
+      ($objElement->sw_device == 'mobile' && $isMobile && !$MobileDetect->isTablet()))
 			return $strBuffer;
 	}
 }
