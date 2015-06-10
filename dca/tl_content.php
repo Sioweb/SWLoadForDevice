@@ -12,7 +12,7 @@
 foreach($GLOBALS['TL_DCA']['tl_content']['palettes'] as $pKey => &$palette)
 {
 	if(!in_array($pKey,array('rocksolid_slider')))
-		$palette = str_replace('type,', 'type,sw_device,', $palette);
+		$palette = str_replace(',type,', ',type,sw_device,', $palette);
 	else
 	{
 		if(is_array($palette))
@@ -26,10 +26,10 @@ foreach($GLOBALS['TL_DCA']['tl_content']['palettes'] as $pKey => &$palette)
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['sw_device'] = array(
 	'label'                   => &$GLOBALS['TL_LANG']['tl_content']['sw_device'],
-	'default'				  => 'all',
-	'exclude'                 => true,
-	'inputType'               => 'select',
-	'reference'				  => &$GLOBALS['TL_LANG']['tl_content']['sw_devices'],
-	'options'				  => array('all','desktop','mobile','mobile&ipad'),
-	'sql'                     => "varchar(50) NOT NULL default 'all'"
+	'default'			=> 'all',
+	'exclude'			=> true,
+	'inputType'		=> 'select',
+	'reference'		=> &$GLOBALS['TL_LANG']['tl_content']['sw_devices'],
+	'options'			=> array('all','desktop','mobile','mobile&ipad','desktop&ipad'),
+	'sql'					=> "varchar(50) NOT NULL default 'all'"
 );
