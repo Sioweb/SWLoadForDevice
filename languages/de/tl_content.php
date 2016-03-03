@@ -2,7 +2,7 @@
 /**
 * Contao Open Source CMS
 *  
-* @file tl_news.php
+* @file tl_content.php
 * @author Sascha Weidner
 * @version 3.0.0
 * @package sioweb.contao.extensions.devices

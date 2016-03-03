@@ -9,4 +9,5 @@
 * @copyright Sascha Weidner, Sioweb
 */
 
-$GLOBALS['TL_HOOKS']['getContentElement'][] = array('ContentDevice', 'loadForDevice');
+$GLOBALS['TL_HOOKS']['getContentElement'][] = array('ContentDevice', 'loadContentForDevice');
+$GLOBALS['TL_HOOKS']['getFrontendModule'][] = array('ModuleDevice', 'loadModuleForDevice');

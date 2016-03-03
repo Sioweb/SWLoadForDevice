@@ -9,12 +9,10 @@
 * @copyright Sascha Weidner, Sioweb
 */
 
-foreach($GLOBALS['TL_DCA']['tl_content']['palettes'] as $pKey => &$palette)
-{
+foreach($GLOBALS['TL_DCA']['tl_content']['palettes'] as $pKey => &$palette) {
 	if(!in_array($pKey,array('rocksolid_slider')))
 		$palette = str_replace(',type,', ',type,sw_device,', $palette);
-	else
-	{
+	else {
 		if(is_array($palette))
 			continue;
 		$semicolon = substr($palette, -1, 1);

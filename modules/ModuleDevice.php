@@ -6,8 +6,8 @@ use Contao;
 /**
 * Contao Open Source CMS
 *  
-* @file ContentDevice.php
-* @class ContentDevice
+* @file ModuleDevice.php
+* @class ModuleDevice
 * @author Sascha Weidner
 * @version 3.0.0
 * @package sioweb.contao.extensions.devices
@@ -15,14 +15,14 @@ use Contao;
 */
 
 
-class ContentDevice extends \Frontend
+class ModuleDevice extends \Frontend
 {
-	public function loadContentForDevice($objElement, $strBuffer)
-	{
+  public function loadModuleForDevice($objElement, $strBuffer)
+  {
     $MobileDetect = new \MobileDetect();
-		$isMobile = ($MobileDetect->isTablet() || $MobileDetect->isMobile());
+    $isMobile = ($MobileDetect->isTablet() || $MobileDetect->isMobile());
 
-		if(
+    if(
       $objElement->sw_device == 'all' || 
       !$objElement->sw_device || 
 
@@ -30,6 +30,6 @@ class ContentDevice extends \Frontend
       ($objElement->sw_device == 'desktop' && !$isMobile) || 
       ($objElement->sw_device == 'desktop&ipad' && (!$MobileDetect->isMobile() || $MobileDetect->isTablet())) || 
       ($objElement->sw_device == 'mobile' && $isMobile && !$MobileDetect->isTablet()))
-			return $strBuffer;
-	}
+      return $strBuffer;
+  }
 }
