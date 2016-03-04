@@ -28,5 +28,5 @@ ClassLoader::addClasses(array
 	// Classes
   'MobileDetect' => 'system/modules/SWLoadForDevice/classes/MobileDetect.php',
   'sioweb\contao\extensions\devices\ContentDevice' => 'system/modules/SWLoadForDevice/elements/ContentDevice.php',
-  'sioweb\contao\extensions\devices\ModuleDevice' => 'system/modules/SWLoadForDevice/elements/ModuleDevice.php',
+  'sioweb\contao\extensions\devices\ModuleDevice' => 'system/modules/SWLoadForDevice/modules/ModuleDevice.php',
 ));
