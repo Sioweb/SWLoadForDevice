@@ -19,7 +19,7 @@ class ContentDevice extends \Frontend
 {
 	public function loadContentForDevice($objElement, $strBuffer)
 	{
-    $MobileDetect = new \MobileDetect();
+    $MobileDetect = new MobileDetect();
 		$isMobile = ($MobileDetect->isTablet() || $MobileDetect->isMobile());
 
 		if(

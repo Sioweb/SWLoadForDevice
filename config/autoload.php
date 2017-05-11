@@ -26,7 +26,8 @@ ClassLoader::addNamespaces(array
 ClassLoader::addClasses(array
 (
 	// Classes
-  'MobileDetect' => 'system/modules/SWLoadForDevice/classes/MobileDetect.php',
+  'Mobile_Detect' => 'system/modules/SWLoadForDevice/classes/Mobile_Detect.php',
+  'sioweb\contao\extensions\devices\MobileDetect' => 'system/modules/SWLoadForDevice/classes/MobileDetect.php',
   'sioweb\contao\extensions\devices\ContentDevice' => 'system/modules/SWLoadForDevice/elements/ContentDevice.php',
   'sioweb\contao\extensions\devices\ModuleDevice' => 'system/modules/SWLoadForDevice/modules/ModuleDevice.php',
 ));

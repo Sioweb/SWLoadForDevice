@@ -19,7 +19,7 @@ class ModuleDevice extends \Frontend
 {
   public function loadModuleForDevice($objElement, $strBuffer)
   {
-    $MobileDetect = new \MobileDetect();
+    $MobileDetect = new MobileDetect();
     $isMobile = ($MobileDetect->isTablet() || $MobileDetect->isMobile());
 
     if(
