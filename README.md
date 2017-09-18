@@ -29,3 +29,33 @@ In diesem Beispiel werden die Werte aus der Klasse komplett überschrieben. Dazu
       $GLOBALS['MobileDetect']['phoneDevices']['replace'] = array('phoneDevices','tabletDevices');
 
 **Achtung:** Dies ist nicht zu empfehlen, da sonst nur die von Hand eingetragenen Gerätetypen funktionieren werden. Im obigen Beispiel würden nur noch drei Mobile-Geräte erkannt werden.
+
+## Rock Solid Custom Elements (Ab v2.3.0)
+
+Um die Funktionalität für RSCE zu erweitern muss das Feld `sw_device` in der Config des neuen Elementes hinzugefügt werden. Im Folgenden das Beispielsnippet von RSCE:
+
+      <?php
+            // rsce_my_element_config.php
+            return array(
+                'label' => array('Mein Element', 'Meine Beschreibung...'),
+                'types' => array('content', 'module'),
+                'contentCategory' => 'texts',
+                'moduleCategory' => 'miscellaneous',
+                'standardFields' => array('headline', 'cssID'),
+                'wrapper' => array(
+                    'type' => 'none',
+                ),
+                'fields' => array(
+                    'text' => array(
+                        'label' => array('Text', 'Beschreibung...'),
+                        'eval' => array('rte' => 'tinyMCE'),
+                        'inputType' => 'textarea',
+                    ),
+                    'sw_device' => array(
+                        'label' => array('Load for Device', 'Beschreibung...'),
+                        'inputType' => 'select',
+                        'reference' => &$GLOBALS['TL_LANG']['tl_content']['sw_devices'],
+                        'options' => array('all','desktop','mobile','mobile&ipad','desktop&ipad'),
+                    ),
+                ),
+            );
